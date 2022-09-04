@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+.img-fluid.cust-img-fluid {
+  max-width: 13%;
+  max-height: 13%;
+}
+
+.mt-n-3 {
+  margin-top: -3%;
+}
+
+.gx.cust-gx {
+  padding-left: 0%;
+}
+
+.w-nv-10 {
+  max-width: -2%;
+}
+
+img.img-fr {
+  margin-left: 92em;
+}
+
+@media screen and (max-width: 1080px) {
+  header {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .body section {
+    display: block;
+  }
+}
+
+em.icon-github {
+  background-image: "src/assets/icons/github-30.png";
+}
+
+.col-1.cust-col-1 {
+  width: 3.333333%;
+}
