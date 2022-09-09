@@ -16,20 +16,25 @@
 }
 
 img.img-fr {
-  margin-left: 92em;
+  margin-left: 103em;
 }
 
-@media screen and (max-width: 1080px) {
+/* @media screen and (max-width: 1080px) {
   header {
     display: block;
   }
-}
+} */
 
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
   .body section {
     display: block;
   }
 }
+@media screen and (max-width: 1772px) {
+  header {
+    margin-right: 32%;
+  }
+} */
 
 em.icon-github {
   background-image: "src/assets/icons/github-30.png";
@@ -37,4 +42,9 @@ em.icon-github {
 
 .col-1.cust-col-1 {
   width: 3.333333%;
+}
+
+body {
+  margin: 0%;
+  padding: 0%
 }
