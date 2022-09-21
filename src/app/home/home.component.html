@@ -12,9 +12,19 @@
       </div>
     </div>
     <!-- <div class="has-text-centered"> -->
-      <button class="button is-success is-outlined is-rounded is-centered" type="submit">
-        Search
-      </button>
+    <button
+      class="button is-success is-outlined is-rounded is-centered"
+      type="submit"
+      (click)="getCurrencyExchange()"
+    >
+      Search
+    </button>
     <!-- </div> -->
   </form>
+</section>
+
+<section class="section">
+  <ul *ngFor="let currency of currencies">
+    <li>{{ currency.name }}</li>
+  </ul>
 </section>
