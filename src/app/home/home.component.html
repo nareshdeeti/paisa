@@ -14,7 +14,7 @@
     <!-- <div class="has-text-centered"> -->
     <button
       class="button is-success is-outlined is-rounded is-centered"
-      type="submit"
+      type="button"
       (click)="getCurrencyExchange()"
     >
       Search
@@ -24,7 +24,18 @@
 </section>
 
 <section class="section">
-  <ul *ngFor="let currency of currencies">
-    <li>{{ currency.name }}</li>
-  </ul>
+  <table>
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Symbol</th>
+    </tr>
+    <ng-container *ngFor="let currency of currencies">
+      <tr>
+        <td>{{ currency.code }}</td>
+        <td>{{ currency.name }}</td>
+        <td>{{ currency.symbol_native }}</td>
+      </tr>
+    </ng-container>
+  </table>
 </section>
