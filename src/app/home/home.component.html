@@ -1,41 +1,41 @@
-<section class="section">
-  <form>
-    <div>
-      <div class="column is-one-third">
-        <input
-          class="input is-normal is-rounded is-success"
-          type="search"
-          name="currencyCode"
-          id="currencyCode"
-          placeholder="Enter currency code eg., INR"
-        />
+<section>
+  <section class="section-1">
+    <form>
+      <div class="search-box">
+        <div class="column is-one-third">
+          <input
+            class="input is-normal is-rounded is-success"
+            type="search"
+            name="currencyCode"
+            id="currencyCode"
+            placeholder="Enter currency code eg., INR"
+          />
+        </div>
+        <button
+          class="button is-success is-outlined is-rounded is-centered"
+          type="button"
+          (click)="getCurrencyExchange()"
+        >
+          Search
+        </button>
       </div>
-    </div>
-    <!-- <div class="has-text-centered"> -->
-    <button
-      class="button is-success is-outlined is-rounded is-centered"
-      type="button"
-      (click)="getCurrencyExchange()"
-    >
-      Search
-    </button>
-    <!-- </div> -->
-  </form>
-</section>
+    </form>
+  </section>
 
-<section class="section">
-  <table class="table">
-    <tr>
-      <th>Code</th>
-      <th>Name</th>
-      <th>Symbol</th>
-    </tr>
-    <ng-container *ngFor="let currency of currencies">
-      <tr>
-        <td>{{ currency.code }}</td>
-        <td>{{ currency.name }}</td>
-        <td>{{ currency.symbol_native }}</td>
-      </tr>
-    </ng-container>
-  </table>
+  <section class="section-2">
+    <div class="search-box-mt-2">
+      <table class="table is-fullwidth">
+        <tr>
+          <th>Code</th>
+          <th>Rate</th>
+        </tr>
+        <ng-container *ngFor="let currency of currentCurrentCurrencyRates">
+          <tr>
+            <td>{{ currency.code }}</td>
+            <td>{{ currency.value }}</td>
+          </tr>
+        </ng-container>
+      </table>
+    </div>
+  </section>
 </section>

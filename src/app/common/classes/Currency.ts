@@ -6,4 +6,5 @@ export class Currency {
     rounding: number = 0;
     code: string = '';
     name_plural: string = '';
+    currency: number = 0;
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Currency } from '../common/classes/Currency';
+import { DataInterface, CurrentCurrencyRate } from '../common/classes/CurrencyApiRes';
+import { HomeService } from './home.service';
 
 @Component({
   selector: 'app-home',
@@ -9,12 +11,16 @@ import { Currency } from '../common/classes/Currency';
 export class HomeComponent implements OnInit {
 
   currencies: Currency[] = [];
+  currenCurrencyData: DataInterface = {};
+  currentCurrentCurrencyRates: CurrentCurrencyRate[] = [];
 
-  constructor() { }
+  constructor(private homeService: HomeService) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // this.homeService.fetchCurrencyExchangeRateByCode('INR');
+  }
 
-  getCurrencyExchange(): void {
+  /* getCurrencyExchange(): void {
       
       let currencyAed = new Currency();
       currencyAed.symbol = "AED";
@@ -24,6 +30,7 @@ export class HomeComponent implements OnInit {
       currencyAed.rounding = 0;
       currencyAed.code = "AFN";
       currencyAed.name_plural = "Afghan Afghanis";
+      currencyAed.currency = 231;
 
       let currencyAf = new Currency();
       currencyAf.symbol = "Af";
@@ -33,8 +40,19 @@ export class HomeComponent implements OnInit {
       currencyAf.rounding = 0;
       currencyAf.code = "AED";
       currencyAf.name_plural = "UAE dirhams";
+      currencyAf.currency = 131;
 
       this.currencies= [currencyAed, currencyAf];
   
+  } */
+
+  getCurrencyExchange(): void {
+    this.currenCurrencyData = this.homeService.fetchCurrencyExchangeRateByCode('INR');
+
+    for(let key in this.currenCurrencyData) {
+      this.currentCurrentCurrencyRates.push(this.currenCurrencyData[key]);
+    }
+
+    console.log(this.currentCurrentCurrencyRates);
   }
 }

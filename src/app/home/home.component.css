@@ -1,7 +1,26 @@
 ::placeholder {
-    color: rgb(124, 49, 99);
+  color: rgb(124, 49, 99);
 }
 
 button.is-centered {
-    margin-left: 12.8%;
+  margin-left: 12.8%;
+}
+
+.search-box {
+  margin-top: 11%;
+  padding-left: 15%;
+}
+
+.search-box-mt-2 {
+    margin-top: -20%;
+    padding-right: 30%;
+}
+.section-1 {
+  float: left;
+  width: 16in;
+}
+
+.section-2 {
+  float: right;
+  width: 6in;
 }
