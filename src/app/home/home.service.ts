@@ -31,7 +31,6 @@ export class HomeService {
         }
       });
 
-    console.log(currentCurrentCurrencyRates);
     return currentCurrentCurrencyRates;
   }
 }

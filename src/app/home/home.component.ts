@@ -13,12 +13,14 @@ export class HomeComponent implements OnInit {
   currencies: Currency[] = [];
   currenCurrencyData: DataInterface = {};
   currentCurrentCurrencyRates: CurrentCurrencyRate[] = [];
+  currencyCode: string = '';
 
   constructor(private homeService: HomeService) { }
 
   ngOnInit(): void { }
 
   getCurrencyExchange(): void {
-    this.currentCurrentCurrencyRates = this.homeService.fetchCurrencyExchangeRateByCode('INR');
+    this.currentCurrentCurrencyRates = this.homeService.fetchCurrencyExchangeRateByCode(this.currencyCode);
   }
+
 }
