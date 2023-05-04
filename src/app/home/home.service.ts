@@ -1,6 +1,5 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Currency } from '../common/classes/Currency';
 import { CurrentCurrencyRate, DataInterface } from '../common/classes/CurrencyApiRes'
 
 @Injectable({
