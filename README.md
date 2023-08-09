@@ -4,11 +4,11 @@ Paisa app show the lastest currencies rate.
 
 ## Set-Up
 * Node v18+
-* Angular CLI 15+
+* Angular CLI 16+
 * [CurrencyApi](https://currencyapi.com/) Account
 
 ## Config
-* Open `home.service.ts` file from `home` componet
+* Open `GlobalProperties.ts` file from `\src\app\common\classes` componet
 * Add your `CurrencyApi's` secreat key to `currencyApiSecret`.
 
 Then just start the app and have fun.
